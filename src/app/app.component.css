@@ -1,0 +1,27 @@
+.fondo {
+    background-color: #74dccc;
+} /* Ajustar el espacio entre el logo y el menú */
+.col-6 {
+  display: flex;
+  align-items: right;
+}
+.font{
+  color: black;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right:2%; /* Espacio entre los elementos del menú */
+}
+.mi-componente {
+  font-family: "Berkshire Swash";
+}
+.berkshire-swash-regular {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 480;
+  font-style: strong;
+}

@@ -1,0 +1,82 @@
+
+<body style="background-color:#74dccc" class="mi-componente">
+</body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <img src="logo Marchu (1).jpg" width="240" height="240">
+      </div>
+    <div class="col-2">
+      <h1 class="nav-item" class="berkshire-swash-regular">Bizcocho Cerámico</h1>
+
+    </div>
+
+      <div class="col-7">
+      
+       <ul class="nav justify-content-center ">
+        <li class="nav-item ">
+          <a class="nav-link text-dark active" [routerLink]="['/Home']" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Catálogo']" routerLinkActive="active">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Trabajos Personalizados']" routerLinkActive="active">Trabajos Personalizados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Exclusivos']" routerLinkActive="active">Exclusivos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Nosotros']" routerLinkActive="active">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Consultas']" routerLinkActive="active">Consultas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Clientes']" routerLinkActive="active">Experiencia de Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" [routerLink]="['/Carrito']" routerLinkActive="active">Carrito</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="container-fluid">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-body-secondary">© 2024 Ale Toloza </p>
+
+          <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">News</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+        </footer>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
