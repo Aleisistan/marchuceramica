@@ -48,10 +48,13 @@
     <div class="card-body">
       <h5 class="card-title">Taza 1</h5>
       <p class="card-text">Medidas 15*8</p>
+      <p class="card-text">Precio: {{ currentPrice }}</p>
   </div>
    <div class="card-body">
-      <a href="#" class="card-link text-dark">Agregar Carrito</a>
+      
       <a href="#" class="card-link text-dark">Cantidad</a>
+      
+      <a href="#" class="card-link text-dark" (click)="addToCart()">Agregar Pedido</a>
     </div>
   </div>
 </div>

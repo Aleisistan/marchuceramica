@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { AdministrativoComponent } from './administrativo/administrativo.component';
 import { AdornosComponent } from './adornos/adornos.component';
 import { AppComponent } from './app.component';
-import { CarritoComponent } from './carrito/carrito.component';
+import { AdminGuard } from './auth/admin.guard';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ConsultasComponent } from './consultas/consultas.component';
@@ -13,6 +14,7 @@ import { MacetasComponent } from './macetas/macetas.component';
 import { MatesComponent } from './mates/mates.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { OtrosComponent } from './otros/otros.component';
+import { PedidoComponent } from './pedido/pedido.component';
 import { PlatosComponent } from './platos/platos.component';
 import { RecipientesComponent } from './recipientes/recipientes.component';
 import { TazasComponent } from './tazas/tazas.component';
@@ -28,7 +30,8 @@ export const routes: Routes = [
     { path: 'Home', component: HomeComponent},
     { path: 'Nosotros', component: NosotrosComponent},
     { path: 'Trabajos Personalizados', component: TrabajosPersonalizadosComponent},
-    { path: 'Carrito', component: CarritoComponent},
+    { path: 'Pedido', component: PedidoComponent}, 
+    { path: 'Administrativo', component: AdministrativoComponent, canActivate: [AdminGuard]}, 
     { path: 'Catálogo/Tazas', component: TazasComponent },
     { path: 'Catálogo/Mates', component: MatesComponent },
     { path: 'Catálogo/Macetas', component: MacetasComponent},
@@ -44,9 +47,9 @@ export const routes: Routes = [
 ];
 NgModule({
     declarations: [
-        AppComponent, CarritoComponent, NosotrosComponent, CatalogoComponent, ClientesComponent, ConsultasComponent, ExclusivosComponent, TrabajosPersonalizadosComponent, HomeComponent
+        AppComponent, NosotrosComponent, CatalogoComponent, ClientesComponent, ConsultasComponent, ExclusivosComponent, TrabajosPersonalizadosComponent, HomeComponent
         ],
-    imports: [RouterModule.forRoot(routes), AppComponent, BrowserModule, CarritoComponent, NosotrosComponent, CatalogoComponent, ClientesComponent, ExclusivosComponent, TrabajosPersonalizadosComponent, HomeComponent],
+    imports: [RouterModule.forRoot(routes), AppComponent, BrowserModule, NosotrosComponent, CatalogoComponent, ClientesComponent, ExclusivosComponent, TrabajosPersonalizadosComponent, HomeComponent],
     exports: [RouterModule],
     
     bootstrap: [AppComponent]
